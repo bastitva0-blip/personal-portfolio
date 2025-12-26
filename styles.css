@@ -1,62 +1,113 @@
+/* Color Palette */
 :root {
-    --bg-deep: #050b18;
-    --primary-blue: #00d2ff;
-    --accent-yellow: #ffcc00;
+    --deep-blue: #0A192F;
+    --navy-blue: #112240;
+    --yellow-accent: #FFD700;
+    --white: #F8F9FA;
 }
 
+/* Base Styling */
 body {
-    background-color: var(--bg-deep);
-    /* This applies the network image globally but adds a dark tint for readability */
-    background: linear-gradient(rgba(5, 11, 24, 0.8), rgba(5, 11, 24, 0.8)), 
-                url('image_a46bb4.jpg') center center fixed;
-    background-size: cover;
-    color: yellow;
-    font-family: 'Heebo', sans-serif;
+    background-color: var(--deep-blue);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    margin: 0;
 }
 
-/* Navbar transparency */
-.navbar { background: rgba(5, 11, 24, 0.9); backdrop-filter: blur(10px); }
-
-/* Hero text visibility */
-.hero-header { padding: 10rem 0; }
-
-/* Section Labels - High Contrast Yellow */
-.label-yellow {
-    background: var(--accent-yellow);
-    color: black;
-    padding: 4px 12px;
-    font-weight: 700;
-    font-size: 0.85rem;
-    border-radius: 3px;
-    display: inline-block;
+/* Text Visibility */
+p, span, h1, h2, h3, h5 {
+    color: var(--white);
 }
 
-/* Skills visibility */
-.skill-item { margin-bottom: 20px; }
-.progress { background: rgba(255,255,255,0.1); height: 8px; border-radius: 10px; }
-.progress-bar { background: var(--primary-blue); border-radius: 10px; }
+.text-yellow { color: var(--yellow-accent) !important; }
 
-/* Experience styling */
-.experience-card {
-    border-left: 3px solid var(--primary-blue);
-    padding-left: 15px;
-    margin-top: 15px;
-    background: rgba(255, 255, 255, 0.03);
-    padding: 15px;
-    border-radius: 0 10px 10px 0;
+/* Navbar */
+.navbar { background-color: var(--navy-blue); padding: 1.5rem 0; }
+.navbar-brand h2 { font-weight: 900; color: var(--yellow-accent); letter-spacing: 2px; }
+
+/* Hero Section */
+.hero-header {
+    padding: 10rem 0;
+    background: linear-gradient(rgba(10, 25, 47, 0.7), rgba(10, 25, 47, 0.7)), 
+                url('image_a46bb4.jpg') center/cover no-repeat fixed;
 }
 
-/* Certifications cards */
-.cert-card {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 25px;
+.hero-title { font-size: 5rem; font-weight: 900; margin-bottom: 0.5rem; }
+.hero-subtitle { font-size: 2rem; color: var(--yellow-accent); font-weight: 700; }
+.hero-tagline { font-size: 1.2rem; max-width: 600px; margin: auto; opacity: 0.9; }
+
+/* Labels */
+.section-label {
+    background-color: var(--yellow-accent);
+    color: var(--deep-blue);
+    padding: 6px 16px;
+    font-weight: 900;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    letter-spacing: 1.5px;
+}
+
+/* Experience Box */
+.exp-box {
+    background-color: var(--navy-blue);
+    padding: 2rem;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: 0.3s ease;
+    border-left: 5px solid var(--yellow-accent);
 }
-.cert-card:hover { border-color: var(--primary-blue); transform: translateY(-5px); }
+
+/* Skills/Progress Bar */
+.progress-container {
+    background-color: #233554;
+    height: 12px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--yellow-accent);
+}
+
+/* Cards */
+.cert-card {
+    background-color: var(--navy-blue);
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.cert-card:hover {
+    border-color: var(--yellow-accent);
+    transform: translateY(-10px);
+}
 
 /* Buttons */
-.btn-primary { background: var(--primary-blue); border: none; font-weight: 600; padding: 10px 25px; color: black; }
-.btn-primary:hover { background: #00a8cc; color: white; }
+.btn-yellow {
+    background-color: var(--yellow-accent);
+    color: var(--deep-blue);
+    font-weight: 900;
+    padding: 12px 30px;
+    border-radius: 8px;
+}
 
+.btn-outline-white {
+    border: 2px solid var(--white);
+    color: var(--white);
+    font-weight: 700;
+    padding: 12px 30px;
+    border-radius: 8px;
+}
+
+.contact-link {
+    color: var(--white);
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.contact-link:hover { color: var(--yellow-accent); }
+
+.footer { text-align: center; background-color: var(--navy-blue); }
