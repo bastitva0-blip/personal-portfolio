@@ -6,55 +6,56 @@
 
 body {
     background-color: var(--bg-deep);
-    /* Modern AI-themed mesh gradient */
-    background-image: 
-        radial-gradient(at 0% 0%, rgba(0, 210, 255, 0.15) 0px, transparent 50%),
-        radial-gradient(at 100% 100%, rgba(0, 210, 255, 0.1) 0px, transparent 50%);
+    /* This applies the network image globally but adds a dark tint for readability */
+    background: linear-gradient(rgba(5, 11, 24, 0.8), rgba(5, 11, 24, 0.8)), 
+                url('image_a46bb4.jpg') center center fixed;
+    background-size: cover;
     color: white;
     font-family: 'Heebo', sans-serif;
 }
 
+/* Navbar transparency */
 .navbar { background: rgba(5, 11, 24, 0.9); backdrop-filter: blur(10px); }
 
-/* Hero Section */
-.hero-header {
-    padding: 8rem 0;
-    background: transparent;
-}
+/* Hero text visibility */
+.hero-header { padding: 10rem 0; }
 
-/* Yellow Labels */
+/* Section Labels - High Contrast Yellow */
 .label-yellow {
     background: var(--accent-yellow);
     color: black;
-    padding: 5px 15px;
+    padding: 4px 12px;
     font-weight: 700;
-    font-size: 0.8rem;
-    border-radius: 4px;
+    font-size: 0.85rem;
+    border-radius: 3px;
     display: inline-block;
 }
 
-/* Skills/Experience */
-.skill-item { margin-bottom: 25px; }
-.progress { background: rgba(255,255,255,0.1); height: 8px; }
-.progress-bar { background: var(--primary-blue); }
+/* Skills visibility */
+.skill-item { margin-bottom: 20px; }
+.progress { background: rgba(255,255,255,0.1); height: 8px; border-radius: 10px; }
+.progress-bar { background: var(--primary-blue); border-radius: 10px; }
 
+/* Experience styling */
 .experience-card {
     border-left: 3px solid var(--primary-blue);
-    padding-left: 20px;
-    margin-top: 20px;
+    padding-left: 15px;
+    margin-top: 15px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 15px;
+    border-radius: 0 10px 10px 0;
 }
 
-/* Certification Cards */
+/* Certifications cards */
 .cert-card {
     background: rgba(255, 255, 255, 0.05);
-    padding: 30px;
-    border-radius: 15px;
+    padding: 25px;
+    border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: 0.3s;
-    text-align: center;
+    transition: 0.3s ease;
 }
 .cert-card:hover { border-color: var(--primary-blue); transform: translateY(-5px); }
-.cert-card i { color: var(--primary-blue); }
 
-.btn-primary { background: var(--primary-blue); border: none; font-weight: 600; padding: 12px 30px; border-radius: 5px; color: black;}
-.btn-primary:hover { background: #00a8cc; color: white;}
+/* Buttons */
+.btn-primary { background: var(--primary-blue); border: none; font-weight: 600; padding: 10px 25px; color: black; }
+.btn-primary:hover { background: #00a8cc; color: white; }
