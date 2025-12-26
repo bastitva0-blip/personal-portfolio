@@ -97,6 +97,11 @@ body {
   color: #020617;
 }
 
+/* Utility: yellow text */
+.text-yellow {
+  color: #facc15 !important;
+}
+
 /* Section label */
 .section-label {
   font-size: 0.85rem;
@@ -172,4 +177,3 @@ body {
     padding-top: 5rem;
   }
 }
-
